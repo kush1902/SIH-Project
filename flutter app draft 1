@@ -1,0 +1,114 @@
+class Kushagra extends StatefulWidget {
+   @override
+   _KushagraState createState() => _KushagraState();
+ }
+
+ class _KushagraState extends State<Kushagra> {
+   @override
+   Widget build(BuildContext context) {
+     return Scaffold(
+       appBar: AppBar(
+         title: Text("XYZ",
+             style: TextStyle(
+               fontWeight: FontWeight.bold,
+               color: Colors.white
+             ),),
+         centerTitle: true,
+         backgroundColor: Colors.blueGrey.shade900,
+         actions: <Widget>[
+           IconButton(icon: Icon(Icons.account_box), onPressed: ()=> debugPrint("Icon from the app bar"))
+         ],
+
+       ),
+            backgroundColor: Colors.blueGrey,
+       body: Container(
+         margin: EdgeInsets.only(top: 20),
+         alignment: Alignment.center,
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          padding: EdgeInsets.all(20),
+          children: <Widget>[
+            Container(
+                width: 150,
+                height: 150,
+                margin: EdgeInsets.only(top: 20),
+                decoration: BoxDecoration(
+                color: Colors.blueGrey.shade700,
+                    borderRadius: BorderRadius.circular(12.0)
+                ),
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Text("Request Water",
+                    style: TextStyle(
+                      fontSize: 25.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white
+                    ),),
+                  ),
+                      TextField(
+                          keyboardType: TextInputType.numberWithOptions(decimal: true),
+                          style: TextStyle(color: Colors.white70),
+                          decoration: InputDecoration(
+                          prefixText: "Water in litres",
+                          prefixIcon: Icon(Icons.arrow_right)
+                                    ),
+                                )
+                      ],
+                      ),
+
+
+                      ),
+
+
+           Container(
+             width: 150,
+                  height: 150,
+                  margin: EdgeInsets.only(top: 20.0),
+                  padding: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                  color: Colors.blueGrey.shade700,
+                  borderRadius: BorderRadius.circular(12.0),
+
+                  ),
+                  child: Text("Usage Statistics",
+                  style: TextStyle(
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white
+                  ),
+                    textAlign: TextAlign.center,
+                  ),
+           ),
+
+            Container(
+              width: 150,
+              height: 150,
+              margin: EdgeInsets.only(top: 20.0),
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                  color: Colors.blueGrey.shade700,
+                borderRadius: BorderRadius.circular(12.0),
+
+              ),
+              child: Text("Water Quality",
+                style: TextStyle(
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            )
+          ]
+
+
+        ),
+         
+     )
+
+     );
+
+   }
+ }
